@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'guru.qa'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //test - скоуп , в рамках которой данная зависимость будет доступна
+    testImplementation(
+            // все возможности junit подключам сразу
+            'org.junit.jupiter:junit-jupiter:5.8.1',
+            //библиотека гугла для работы джавой
+            'com.google.guava:guava:31.1-jre',
+            'com.codeborne:selenide:6.5.1'
+    )
+
+}
+
+test { //какой тестовый фреймворк используем
+    useJUnitPlatform()
+
+
+}
